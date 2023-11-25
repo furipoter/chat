@@ -14,11 +14,13 @@ def get_video_list():
             'count': 0
         }
     result = []
-    for item in list:
-        result.append({
-            'name': item['Key'].split('/')[1],
-            'created_at': item['LastModified'].strftime('%Y-%m-%d %H:%M:%S')
-        })
+    for item in list['Contents']:
+        print(item)
+        if 'Key' in item:
+            result.append({
+                'name': item['Key'].split('/')[1],
+                'created_at': item['LastModified'].strftime('%Y-%m-%d %H:%M:%S')
+            })
     return {
         'list': result,
         'count': len(result)
