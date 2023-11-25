@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "furiosa-chat"
+version = "0.1.0"
+description = ""
+authors = ["Shin Hyun <kyaryunha@naver.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.0"
+flask-cors = "^4.0.0"
+flask-sqlalchemy = "^3.1.1"
+boto3 = "^1.29.6"
+pymysql = "^1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
